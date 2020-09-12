@@ -1,5 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
-
-h1{
+nav{
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    min-height: 8vh;
+    background-color: blue;
+}
+.logo {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+}
+.nav-links li {
+    list-style: none; 
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.burger{
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 5px;
+    background-color: royalblue;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1042px){
+    .nav-links{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        display: none;
+    }
 }
