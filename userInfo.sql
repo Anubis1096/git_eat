@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS userInfo;
+CREATE DATABASE userInfo;
+USE userInfo;
+
+CREATE TABLE credentials(
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  email INTEGER(11),
+  password VARCHAR(100),
+  PRIMARY KEY (id)
+);
+
+
