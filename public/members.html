@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Member Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="copyright" content="This project is maintained by Christoph Oberhofer" />
+  <meta name="description" content="QuaggaJS is an advanced barcode-reader written in JavaScript" />
+  <meta name="keywords" content="barcode, javascript, canvas, computer vision, image processing, ean, code128" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://serratus.github.io/v1.0.0-beta.1/examples/multiple/" />
+  <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/styles.css">
+  <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/example.css">
+  <link rel="stylesheet" href="https://serratus.github.io/quaggaJS/stylesheets/pygment_trac.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="stylesheets/style2.css" rel="stylesheet">
+  
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/logout">
+          Logout
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2 style="color:white">Welcome</h2> <span class="member-name"></span></h2>
+      </div>
+    </div>
+  </div>
+  <section id="container" class="container">
+    <h3>Scan various barcodes continously</h3>
+
+    <div class="controls">
+      <button type="button" class="btn btn-lg button scan">Start Scanning</button>
+      <div hidden class="container">
+
+        <div class="readers">
+          <label>
+            <span>EAN-13</span>
+            <input type="checkbox" checked name="ean_reader" />
+          </label>
+          <label>
+            <span>EAN-8</span>
+            <input type="checkbox" name="ean_8_reader" />
+          </label>
+          <label>
+            <span>UPC-E</span>
+            <input type="checkbox" name="upc_e_reader" />
+          </label>
+          <label>
+            <span>Code 39</span>
+            <input type="checkbox" checked name="code_39_reader" />
+          </label>
+          <label>
+            <span>Codabar</span>
+            <input type="checkbox" name="codabar_reader" />
+          </label>
+          <label>
+            <span>Code 128</span>
+            <input type="checkbox" checked name="code_128_reader" />
+          </label>
+          <label>
+            <span>Interleaved 2 of 5</span>
+            <input type="checkbox" name="i2of5_reader" />
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="overlay overlay--inline">
+      <div class="overlay__content">
+        <div class="overlay__close">X</div>
+        <ul class="results"></ul>
+      </div>
+    </div>
+  </section>
+  <!-- <ul class="results"></ul> -->
+  </section>
+  </div>
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script>
+    var host = "serratus.github.io";
+    if ((host == window.location.host) && (window.location.protocol != "https:")) {
+      window.location.protocol = "https";
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/scale.fix.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="./js/quagga.js"></script>
+  <script type="text/javascript" src="./js/barcode.js"></script>
+  <script type="text/javascript" src="./js/prism.js"></script>
+</body>
+
+</html>
