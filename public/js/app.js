@@ -30,4 +30,15 @@ $(document).ready(function () {
   $.get("/api/user_data").then(function (data) {
     $(".member-name").text(data.email);
   });
+
+
+  // const search = $("#searchBtn");
+  
+  // search.on("click", function (event) {
+//   event.preventDefault();
+//   const userInput = $("#userInput").val();
+//   console.log(userInput);
+//   userSearch();
+//   console.log("clicky working");
+// });
 });
