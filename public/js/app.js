@@ -30,4 +30,31 @@ $(document).ready(function () {
   $.get("/api/user_data").then(function (data) {
     $(".member-name").text(data.email);
   });
+
+  
+
+  $("#searchBtn").on("click", function (event) {
+    event.preventDefault();
+    const userInput = $("#userInput").val();
+    console.log(userInput);
+
+    if (userInput == "") {
+      // if the user does not enter a name, display error message
+      alert(
+        "Please enter an ingredient"
+      );
+    } else {
+      $.ajax("/api/spoons/", {
+        type: "POST",
+        data: {
+          userInput: userInput,
+        },
+      }).then(function (res) {
+        // reload the page to display new burger
+        console.log(res);
+      });
+    }
+
+    console.log("clicky working");
+  });
 });
