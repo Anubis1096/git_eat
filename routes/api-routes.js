@@ -76,7 +76,7 @@ module.exports = function (app) {
     })
       // Send back the API data
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         res.json(response.data)
       })
       .catch((error) => {
