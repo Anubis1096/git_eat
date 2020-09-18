@@ -44,3 +44,7 @@ body {
 .special-card {
     background: rgba(19, 29, 29, 0.5); 
 }
+
+.shadow {
+    text-shadow:5px 5px 5px#ff4444;
+}
