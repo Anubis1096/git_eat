@@ -1,8 +1,8 @@
 const spoons = require("../config/spoonCalls")
 
 const userCalls = {
-  userInput: function (somethingFromTheClient) {
-    spoons.userInput(somethingFromTheClient, function (res) {
+  userSearch: function (text) {
+    spoons.userSearch(text, function (res) {
       cb(res);
     });
   },

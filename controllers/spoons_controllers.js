@@ -1,15 +1,16 @@
 const express = require("express");
+const { userInput } = require("./spoons");
 
 const router = express.Router();
 
-const userCalls = require("../models/spoons");
+const userCalls = require("./spoons");
 
 //find new recipes
-router.get("/api/spoons", function (req, res) {
-    userCalls.userInput(req.body.item, function (data) {
+router.post("/api/spoons/", function (req, res) {
+    userCalls.userInput(userInput, function (data) {
       // Send back the ID of the new burger
       res.json();
        console.log(data);
-       console.log(req.body.item + " this guy");
+       console.log(userInput + " this guy");
     });
   });
