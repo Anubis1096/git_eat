@@ -1,0 +1,50 @@
+body {
+    font-family: 'Courgette', cursive;
+    background: url(background.jpg) no-repeat
+      center center fixed;
+    background-size: cover;
+  }
+
+#trivia {
+    padding: 15px; 
+    text-align: center;
+    border-style: solid;
+    border-color: floralwhite;
+    border-radius: 25px;
+    width: 95%;
+}
+
+#recipeCards {
+    padding: 15px; 
+    text-align: center;
+}
+
+#joke {
+    /* position: absolute;
+    bottom: 0; */
+    width: 95%;
+    padding: 15px; 
+    text-align: center;
+    border-style: solid;
+    border-color: floralwhite;
+    border-radius: 25px;
+}
+
+.transbox {
+    margin: 30px;
+    background: rgba(19, 29, 29, 0.5)
+}
+
+.transbox p,
+.transbox h1,
+.randomRecipes {
+    color: #ffc107;
+}
+
+.special-card {
+    background: rgba(19, 29, 29, 0.5); 
+}
+
+.shadow {
+    text-shadow:5px 5px 5px#ff4444;
+}
