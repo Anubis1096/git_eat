@@ -1,7 +1,6 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const userCalls = require("../controllers/spoons");
 const axios = require("axios");
 require("dotenv").config();
 

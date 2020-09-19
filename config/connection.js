@@ -1,12 +1,12 @@
 // Set up MySQL connection.
-const mysql = require("mysql");
 
+const sequelize = require("sequelize");
 
 
 if (process.env.JAWSDB_URL) {
-	var connection = mysql.createConnection(process.env.JAWSDB_URL);
+	var connection = sequelize.createConnection(process.env.JAWSDB_URL);
 } else {
-  var connection = mysql.createConnection({
+  var connection = sequelize.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
