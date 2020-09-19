@@ -33,7 +33,9 @@ body {
   border-color: floralwhite;
   border-radius: 25px;
 }
-
+.yellow{
+  color: yellow;
+}
 .transbox {
   margin: 30px;
   background: rgba(19, 29, 29, 0.5)
@@ -43,6 +45,22 @@ body {
 .transbox h1,
 .randomRecipes {
   color: #ffc107;
+}
+
+#recipeCards{
+  width: 95%;
+  padding: 15px; 
+  text-align: center;
+  border-style: solid;
+  border-color: floralwhite;
+  border-radius: 25px;
+
+}
+
+#card{
+  background-color: rgba(119, 119, 119, 0.205);
+  max-width: 312px;
+  
 }
 
 .special-card {

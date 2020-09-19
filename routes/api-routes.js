@@ -51,7 +51,7 @@ module.exports = function (app) {
     }
   });
 
-  //find new recipes
+  // find new recipes
   app.post("/api/spoons/", function (req, res) {
     console.log("route hit");
     const typedStuff = req.body.userInput;
@@ -77,10 +77,34 @@ module.exports = function (app) {
       // Send back the API data
       .then((response) => {
         // console.log(response.data);
-        res.json(response.data)
+        res.json(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   });
 };
+
+// app.post("/api/spoons/", function (req, res) {
+//   console.log("route hit");
+//   const recipeID = req.body.id;
+//   console.log(recipeID);
+//   axios({
+//     method: "GET",
+//     url:
+//       "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information",
+//     headers: {
+//       "content-type": "application/octet-stream",
+//       "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+//       "x-rapidapi-key": process.env.API_KEY,
+//       useQueryString: true,
+//     },
+//   })
+//     .then((response) => {
+//       console.log(response);
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// });
+// }
