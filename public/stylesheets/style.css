@@ -196,6 +196,9 @@ nav {
   margin: 5px;
   transition: all 0.3 s ease;
 }
+.yellow{
+  color: yellow;
+}
 
 @media screen and (max-width: 1042px) {
   .nav-links {

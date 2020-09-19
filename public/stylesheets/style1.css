@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url('https://thumbs.dreamstime.com/z/assorted-indian-food-different-bowls-assorted-indian-food-dark-wooden-background-top-view-dishes-appetizers-indian-114696141.jpg');
+background-image: url(../assets/img/credential_img.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -25,11 +25,13 @@ background-color: rgba(0,0,0,0.5) !important;
 .card-header h3{
 color: white;
 }
-
+.yellow{
+  color: yellow;
+}
 
 .input-group-prepend span{
 width: 50px;
-background-color: #FFC312;
+background-color: #d9534f;
 color: black;
 border:0 !important;
 }
@@ -54,7 +56,7 @@ margin-right: 5px;
 
 .login_btn{
 color: black;
-background-color: #FFC312;
+background-color: #d9534f;
 width: 100px;
 }
 
@@ -80,7 +82,16 @@ body {
   font-weight: 300;
 }
 
-h1,
+h1{
+  color: #ffc107;
+
+  font-size: 80px;
+  text-align: center;
+}
+.shadow {
+  text-shadow:5px 5px 5px#ff4444;
+}
+
 h2,
 h3,
 h4,
@@ -89,8 +100,13 @@ h6 {
   color: #222;
   margin: 0 0 20px;
 }
+p{
+  color: #ffc107;
+  text-align: center;
+  font-size: 25px;
+}
 
-p,
+/* p, */
 ul,
 ol,
 table,
@@ -99,15 +115,15 @@ dl {
   margin: 0 0 20px;
 }
 
-h1,
+/* h1, */
 h2,
 h3 {
   line-height: 1.1;
 }
 
-h1 {
+/* h1 {
   font-size: 28px;
-}
+} */
 
 h2 {
   color: #393939;
