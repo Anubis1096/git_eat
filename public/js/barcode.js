@@ -49,7 +49,7 @@ var App = {
     $(".btn-secondary").on("click", function (event) {
       event.preventDefault();
       $("#recipeCards").empty();
-      const barcode = this.id;
+      const barcode = this.id
       console.log(barcode);
 
       if (barcode == "") {
@@ -68,11 +68,11 @@ var App = {
             const recipeTitleDiv = $(
               ' <h3 class="yellow" id="recipeTitle"></h3>'
             );
-            // const id = res.id;
+            const id = res.id;
             const recipeImage = $(
-              `<a id="image"><img src=${res.images[0]} alt=${res.title}></a>`
+              `<img src=${res.images[0]} alt=${res.title}>`
             );
-            // recipeImage.attr("id", id);
+            recipeImage.attr("id", id);
             recipeImage.attr("class", "image");
             // recipeImage.attr("onclick", "imageClick()");
             
@@ -88,47 +88,6 @@ var App = {
         document.querySelector(".container .controls").classList.remove("hide");
         document.querySelector(".overlay--inline").classList.remove("show");
       };
-    });
-    $("a").on("click", function (event) {
-      event.preventDefault();
-      $("#recipeCards").empty();
-      const userInput = this.id;
-      console.log(userInput);
-  
-      if (userInput == "") {
-        // if the user does not enter a name, display error message
-        alert("Please enter an ingredient");
-      } else {
-        $.ajax("/api/spoons/", {
-          type: "POST",
-          data: {
-            userInput: userInput,
-          },
-        }).then(function (res) {
-          for (let i = 0; i < 5; i++) {
-            const recipeBox = $("#recipeCards");
-            const card = $(' <div class="card" id="card">');
-            const recipeTitleDiv = $(
-              ' <h3 class="yellow" id="recipeTitle"></h3>'
-            );
-            const id = res[i].title;
-            const recipeImage = $(
-              `<img src=${res[i].image} alt=${res[i].title}>`
-            );
-            recipeImage.attr("id", id);
-            recipeImage.attr("class", "image");
-            recipeTitleDiv.append(`${res[i].title}`);
-            card.append(recipeTitleDiv, recipeImage);
-            recipeBox.append(card);
-  
-            // Append the table row to the table body
-  
-            console.log(res);
-          }
-        });
-      }
-  
-      console.log("clicky working");
     });
   },
 
