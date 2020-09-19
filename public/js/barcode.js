@@ -52,10 +52,7 @@ var App = {
       const barcode = this.id
       console.log(barcode);
 
-      if (barcode == "") {
-        // if the user does not enter a name, display error message
-        alert("Please enter an ingredient");
-      } else {
+     
         $.ajax("/api/barcode/", {
           type: "POST",
           data: {
@@ -81,7 +78,7 @@ var App = {
             recipeBox.append(card);
           }
         });
-      }
+      
 
       console.log("clicky working");
       () => {
