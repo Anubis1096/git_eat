@@ -5,10 +5,10 @@ const session = require("express-session");
 const passport = require("./config/passport");
 //secures api keys and other information you want to protect
 
+const PORT = process.env.PORT || 8080;
 
 
 // Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
@@ -24,7 +24,6 @@ app.use(passport.session());
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
-require('dotenv').config();
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
