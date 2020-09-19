@@ -5,7 +5,7 @@ const session = require("express-session");
 const passport = require("./config/passport");
 //secures api keys and other information you want to protect
 
-const PORT = process.env.PORT || 8080;
+// const PORT = process.env.PORT || 8080;
 
 
 // Setting up port and requiring models for syncing
@@ -13,6 +13,7 @@ const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
+app.set('port', process.env.PORT || 8080);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("./public"));
@@ -25,10 +26,10 @@ app.use(passport.session());
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
+
 // Syncing our database and logging a message to the user upon success
-// db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT)
-    db.sequelize.sync();
+db.sequelize.sync().then(function() {
+  http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
   });
-// });
+});
