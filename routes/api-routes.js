@@ -51,7 +51,7 @@ module.exports = function (app) {
   });
 
   // find new recipes
-  app.post("/api/spoons/", function (req, res) {
+  app.get("/api/spoons/", function (req, res) {
     console.log("route hit");
     const typedStuff = req.body.userInput;
     console.log(typedStuff);
