@@ -60,7 +60,7 @@
     </div>
     </div>
     <!--barcode scanner card-->
-    <div class="card special-card">
+    <div class="card special-card justify-content-center">
         <div id="demo" class="collapse in">
             <div class="overlay overlay--inline">
                 <div class="overlay__content">
@@ -82,7 +82,7 @@
                         <div class="readers">
                             <label>
                                 <span>EAN-13</span>
-                                <input type="checkbox" checked name="ean_reader" />
+                                <input type="checkbox" checked name="upc_reader" />
                             </label>
                             <label>
                                 <span>EAN-8</span>
@@ -90,11 +90,11 @@
                             </label>
                             <label>
                                 <span>UPC-E</span>
-                                <input type="checkbox" name="upc_e_reader" />
+                                <input type="checkbox" checked name="upc_e_reader" />
                             </label>
                             <label>
                                 <span>Code 39</span>
-                                <input type="checkbox" checked name="code_39_reader" />
+                                <input type="checkbox" name="code_39_reader" />
                             </label>
                             <label>
                                 <span>Codabar</span>
@@ -102,7 +102,7 @@
                             </label>
                             <label>
                                 <span>Code 128</span>
-                                <input type="checkbox" checked name="code_128_reader" />
+                                <input type="checkbox"  name="code_128_reader" />
                             </label>
                             <label>
                                 <span>Interleaved 2 of 5</span>
@@ -116,12 +116,7 @@
         </div>
     </div>
     <!-- </div> -->
-    <div class="overlay overlay--inline">
-        <div class="overlay__content">
-            <div class="overlay__close">X</div>
-            <ul class="results"></ul>
-        </div>
-    </div>
+    
     <!--about card-->
     <div class="card special-card">
         <div id="project" class="collapse in">

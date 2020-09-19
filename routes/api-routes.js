@@ -51,7 +51,7 @@ module.exports = function (app) {
   });
 
   // find new recipes
-  app.get("/api/spoons/", function (req, res) {
+  app.post("/api/spoons/", function (req, res) {
     console.log("route hit");
     const typedStuff = req.body.userInput;
     console.log(typedStuff);
@@ -82,28 +82,28 @@ module.exports = function (app) {
         console.log(error);
       });
   });
-};
 
-// app.post("/api/spoons/", function (req, res) {
-//   console.log("route hit");
-//   const recipeID = req.body.id;
-//   console.log(recipeID);
-//   axios({
-//     method: "GET",
-//     url:
-//       "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information",
-//     headers: {
-//       "content-type": "application/octet-stream",
-//       "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-//       "x-rapidapi-key": process.env.API_KEY,
-//       useQueryString: true,
-//     },
-//   })
-//     .then((response) => {
-//       console.log(response);
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
-// }
+  app.post("/api/barcode/", function (req, res) {
+    console.log("route hit");
+    const barcode = req.body.barcode;
+    console.log(barcode);
+    axios({
+      method: "GET",
+      url:
+        "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/upc/" + barcode,
+      headers: {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host":
+          "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+        "x-rapidapi-key": process.env.API_KEY,
+        useQueryString: true,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+};

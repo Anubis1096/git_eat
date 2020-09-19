@@ -72,26 +72,29 @@ $(document).ready(function () {
     console.log("clicky working");
   });
 
-  //   $(".").on("click", function (event) {
-  //     event.preventDefault();
-  //     const userInput = $("#userInput").val();
-  //     console.log(userInput);
 
-  //     if (userInput == "") {
-  //       // if the user does not enter a name, display error message
-  //       alert("Please enter an ingredient");
-  //     } else {
-  //       $.ajax("/api/spoons/", {
-  //         type: "POST",
-  //         data: {
-  //           userInput: userInput,
-  //         },
-  //       }).then(function (res) {
-  //         // reload the page to display new burger
-  //         console.log(res);
-  //       });
-  //     }
+  
+    $("#button1").on("click", function (event) {
+      event.preventDefault();
+      console.log(this);
+      const barcode = this.id.val();
+      console.log(barcode);
 
-  //     console.log("clicky working");
-  //   });
+      if (barcode == "") {
+        // if the user does not enter a name, display error message
+        alert("Please enter an ingredient");
+      } else {
+        $.ajax("/api/barcode/", {
+          type: "POST",
+          data: {
+            barcode: barcode,
+          },
+        }).then(function (res) {
+          // reload the page to display new burger
+          console.log(res);
+        });
+      }
+
+      console.log("clicky working");
+    });
 });
