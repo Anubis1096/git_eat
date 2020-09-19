@@ -33,6 +33,7 @@ $(document).ready(function () {
 
   $("#searchBtn").on("click", function (event) {
     event.preventDefault();
+    $("#recipeCards").empty();
     const userInput = $("#userInput").val();
     console.log(userInput);
 
@@ -72,29 +73,45 @@ $(document).ready(function () {
     console.log("clicky working");
   });
 
+  // $("<img>").on("click", function (event) {
+  //   event.preventDefault();
+  //   $("#recipeCards").empty();
+  //   const userInput = this.id;
+  //   console.log(userInput);
 
-  
-    $("#button1").on("click", function (event) {
-      event.preventDefault();
-      console.log(this);
-      const barcode = this.id.val();
-      console.log(barcode);
+  //   if (userInput == "") {
+  //     // if the user does not enter a name, display error message
+  //     alert("Please enter an ingredient");
+  //   } else {
+  //     $.ajax("/api/spoons/", {
+  //       type: "POST",
+  //       data: {
+  //         userInput: userInput,
+  //       },
+  //     }).then(function (res) {
+  //       for (let i = 0; i < 5; i++) {
+  //         const recipeBox = $("#recipeCards");
+  //         const card = $(' <div class="card" id="card">');
+  //         const recipeTitleDiv = $(
+  //           ' <h3 class="yellow" id="recipeTitle"></h3>'
+  //         );
+  //         const id = res[i].title;
+  //         const recipeImage = $(
+  //           `<img src=${res[i].image} alt=${res[i].title}>`
+  //         );
+  //         recipeImage.attr("id", id);
+  //         recipeImage.attr("class", "image");
+  //         recipeTitleDiv.append(`${res[i].title}`);
+  //         card.append(recipeTitleDiv, recipeImage);
+  //         recipeBox.append(card);
 
-      if (barcode == "") {
-        // if the user does not enter a name, display error message
-        alert("Please enter an ingredient");
-      } else {
-        $.ajax("/api/barcode/", {
-          type: "POST",
-          data: {
-            barcode: barcode,
-          },
-        }).then(function (res) {
-          // reload the page to display new burger
-          console.log(res);
-        });
-      }
+  //         // Append the table row to the table body
 
-      console.log("clicky working");
-    });
+  //         console.log(res);
+  //       }
+  //     });
+  //   }
+
+  //   console.log("clicky working");
+  // });
 });

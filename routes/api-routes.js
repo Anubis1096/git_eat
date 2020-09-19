@@ -101,6 +101,7 @@ module.exports = function (app) {
     })
       .then((response) => {
         console.log(response);
+        res.json(response.data);
       })
       .catch((error) => {
         console.log(error);
