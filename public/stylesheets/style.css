@@ -1,0 +1,356 @@
+/* form.signup,
+form.login {
+  margin-top: 50px;
+} */
+body {
+  font-family: 'Courgette', cursive;
+  background: url(../assets/img/background.jpg) no-repeat
+    center center fixed;
+  background-size: cover;
+}
+
+#trivia {
+  padding: 15px; 
+  text-align: center;
+  border-style: solid;
+  border-color: floralwhite;
+  border-radius: 25px;
+  width: 95%;
+}
+
+#recipeCards {
+  padding: 15px; 
+  text-align: center;
+}
+
+#joke {
+  /* position: absolute;
+  bottom: 0; */
+  width: 95%;
+  padding: 15px; 
+  text-align: center;
+  border-style: solid;
+  border-color: floralwhite;
+  border-radius: 25px;
+}
+
+.transbox {
+  margin: 30px;
+  background: rgba(19, 29, 29, 0.5)
+}
+
+.transbox p,
+.transbox h1,
+.randomRecipes {
+  color: #ffc107;
+}
+
+.special-card {
+  background: rgba(19, 29, 29, 0.5); 
+}
+
+.shadow {
+  text-shadow:5px 5px 5px#ff4444;
+}
+
+h2 {
+  color: white;
+}
+
+.container {
+  height: 100%;
+  align-content: center;
+}
+
+/* .card {
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+} */
+
+.social_icon span {
+  font-size: 60px;
+  margin-left: 10px;
+  color: #ffc312;
+}
+
+.social_icon span:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.card-header h3 {
+  color: white;
+}
+
+.social_icon {
+  position: absolute;
+  right: 20px;
+  top: -45px;
+}
+
+.input-group-prepend span {
+  width: 50px;
+  background-color: #ffc312;
+  color: black;
+  border: 0 !important;
+}
+
+input:focus {
+  outline: 0 0 0 0 !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+  color: white;
+}
+
+.remember input {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.login_btn {
+  color: black;
+  background-color: #ffc312;
+  width: 100px;
+}
+
+.login_btn:hover {
+  color: black;
+  background-color: white;
+}
+
+.links {
+  color: white;
+}
+
+.links a {
+  margin-left: 4px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: blue;
+}
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+.nav-links li {
+  list-style: none;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 5px;
+  background-color: royalblue;
+  margin: 5px;
+  transition: all 0.3 s ease;
+}
+
+@media screen and (max-width: 1042px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: grey;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/****BARCODE SCANNER SECTION ********************************/
+
+@media (max-width: 300px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls .readers {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+}
+
+/* Scan! Button */
+.icon-barcode.scan {
+  font-size: large;
+  padding: 0.5em 0.5em 0.5em 4em;
+  text-align: center;
+  display: block;
+  background-position: 0.5em center;
+}
+.icon-barcode.scan:before {
+  margin-right: 0.5em;
+}
+/* Reader Checkboxes */
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.controls .readers {
+  font-size: 1.3em;
+  margin-left: 1em;
+}
+
+.controls .readers label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.controls .readers input {
+  flex: 0 0 auto;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.controls .readers span {
+  flex: 1 1 auto;
+}
+
+/* Results */
+
+.overlay .results {
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  left: 0;
+  right: 0;
+}
+
+.results {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #ddd;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding: 0.25rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid #777;
+}
+
+.results > li {
+  flex: 0 1 auto;
+  margin: 0.25rem;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.results:empty {
+  display: none;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.result > .format {
+  font-weight: bold;
+}
+
+.result > .code {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Scanner */
+
+.container .controls.hide {
+  display: none;
+}
+
+.overlay--inline {
+  display: none;
+}
+
+.overlay--inline.show {
+  display: block;
+}
