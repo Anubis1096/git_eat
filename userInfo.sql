@@ -1,0 +1,7 @@
+DROP DATABASE IF EXISTS userInfo;
+CREATE DATABASE userInfo;
+USE userInfo;
+
+
+
+
