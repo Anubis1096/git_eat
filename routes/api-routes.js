@@ -1,7 +1,6 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const userCalls = require("../controllers/spoons");
 const axios = require("axios");
 require("dotenv").config();
 
@@ -83,28 +82,29 @@ module.exports = function (app) {
         console.log(error);
       });
   });
-};
 
-// app.post("/api/spoons/", function (req, res) {
-//   console.log("route hit");
-//   const recipeID = req.body.id;
-//   console.log(recipeID);
-//   axios({
-//     method: "GET",
-//     url:
-//       "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information",
-//     headers: {
-//       "content-type": "application/octet-stream",
-//       "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-//       "x-rapidapi-key": process.env.API_KEY,
-//       useQueryString: true,
-//     },
-//   })
-//     .then((response) => {
-//       console.log(response);
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
-// });
-// }
+  app.post("/api/barcode/", function (req, res) {
+    console.log("route hit");
+    const barcode = req.body.barcode;
+    console.log(barcode);
+    axios({
+      method: "GET",
+      url:
+        "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/upc/" + barcode,
+      headers: {
+        "content-type": "application/octet-stream",
+        "x-rapidapi-host":
+          "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+        "x-rapidapi-key": process.env.API_KEY,
+        useQueryString: true,
+      },
+    })
+      .then((response) => {
+        console.log(response);
+        res.json(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+};

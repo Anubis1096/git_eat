@@ -60,7 +60,7 @@
     </div>
     </div>
     <!--barcode scanner card-->
-    <div class="card special-card">
+    <div class="card special-card justify-content-center">
         <div id="demo" class="collapse in">
             <div class="overlay overlay--inline">
                 <div class="overlay__content">
@@ -82,7 +82,7 @@
                         <div class="readers">
                             <label>
                                 <span>EAN-13</span>
-                                <input type="checkbox" checked name="ean_reader" />
+                                <input type="checkbox" checked name="upc_reader" />
                             </label>
                             <label>
                                 <span>EAN-8</span>
@@ -94,7 +94,7 @@
                             </label>
                             <label>
                                 <span>Code 39</span>
-                                <input type="checkbox" checked name="code_39_reader" />
+                                <input type="checkbox" name="code_39_reader" />
                             </label>
                             <label>
                                 <span>Codabar</span>
@@ -116,12 +116,7 @@
         </div>
     </div>
     <!-- </div> -->
-    <div class="overlay overlay--inline">
-        <div class="overlay__content">
-            <div class="overlay__close">X</div>
-            <ul class="results"></ul>
-        </div>
-    </div>
+
     <!--about card-->
     <div class="card special-card">
         <div id="project" class="collapse in">
@@ -144,11 +139,11 @@
     </div>
     <div class="container">
         <div class="randomRecipes banner transbox text_shadow" id="recipeCards">
-            <h1>Some Recommended Recipes</h1>
-            
 
-            </div>
+
+
         </div>
+    </div>
     </div>
     </div>
 
@@ -161,7 +156,7 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+        </script>
     <script type="text/javascript" src="./js/scale.fix.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
     <script type="text/javascript" src="./js/quagga.js"></script>
@@ -173,9 +168,10 @@
             window.location.protocol = "https";
         }
     </script>
-    <script src="./js/app.js"></script>
-    <script src="./routes/api-routes.js"></script>
+    
+    
+<script src="./js/app.js"></script>
 
 </body>
-
+<a>
 </html>
